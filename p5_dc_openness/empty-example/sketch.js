@@ -32,9 +32,27 @@ function draw() {
   line(entities[0].position.x+random(3), entities[0].position.y+random(3), entities[4].position.x+random(3), entities[4].position.y+random(3)) //between 0 and 2
   line(entities[0].position.x+random(3), entities[0].position.y+random(3), entities[5].position.x+random(3), entities[5].position.y+random(3)) //between 0 and 3
 
+  //if the mouse is within the orange entity, show the text
+//console.log("Mouse postion: " + mouseX + ", " + mouseY);
+  if (
+    mouseX >= 100 &&
+    mouseX <= 200 &&
+    mouseY >= 250 &&
+    mouseY <= 350)
+    {
+    console.log("Within");
+    let license = "GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation. \n\nThe licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users."
+    fill(50);
+    text(license, 50,250,250,250);
+  }
+  else {
+    //console.log("Not within");
+  }
+
+
   //classes in p5: https://happycoding.io/tutorials/p5js/creating-classes
   //https://p5js.org/examples/form-regular-polygon.html
-  //https://p5js.org/examples/form-pie-chart.html 
+  //https://p5js.org/examples/form-pie-chart.html
 }
 
 class Entity{
